@@ -52,7 +52,7 @@ end
 function love.draw()
     cam:attach()
         gameMap:drawLayer(gameMap.layers["Tile Layer 1"])
-        --world:draw()
+        world:draw()
         drawPlayer()
     cam:detach()
 end
