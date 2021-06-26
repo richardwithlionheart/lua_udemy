@@ -8,8 +8,8 @@ return {
   height = 12,
   tilewidth = 64,
   tileheight = 64,
-  nextlayerid = 4,
-  nextobjectid = 5,
+  nextlayerid = 6,
+  nextobjectid = 11,
   properties = {},
   tilesets = {
     {
@@ -75,7 +75,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 3,
-      name = "Object Layer 1",
+      name = "Platforms",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -84,19 +84,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 1,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 192,
-          y = 320,
-          width = 576,
-          height = 448,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
         {
           id = 2,
           name = "",
@@ -131,6 +118,60 @@ return {
           x = 2368,
           y = 384,
           width = 192,
+          height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 6,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -640,
+          y = 768,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "Enemies",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 7,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1088,
+          y = 448,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 9,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1728,
+          y = 384,
+          width = 64,
           height = 64,
           rotation = 0,
           visible = true,
