@@ -1,3 +1,5 @@
+local M = {}
+
 player = world:newRectangleCollider(360, 100, 40, 100, {collision_class = "Player"})
 player:setFixedRotation(true)
 player.speed = 240
@@ -49,6 +51,9 @@ function playerUpdate(dt)
 end
 
 function drawPlayer()
+    
     local px, py = player:getPosition()
     player.animation:draw(sprites.playerSheet, px, py, nil, 0.25 * player.direction, 0.25, 130, 300)
 end
+
+return M

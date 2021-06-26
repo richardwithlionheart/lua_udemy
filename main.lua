@@ -26,6 +26,8 @@ function love.load()
     world:addCollisionClass('Danger')
 
     require('player')
+    require('enemy')
+
 
     --dangerZone = world:newRectangleCollider(0, 550, 800, 50, {collision_class = "Danger"})
     --dangerZone:setType('static')
@@ -33,21 +35,24 @@ function love.load()
     platforms = {}
 
     loadMap()
+
+    spawnEnemy(960, 320)
 end
 
 function love.update(dt)
     world:update(dt)
     gameMap:update(dt)
     playerUpdate(dt)
+    updateEnemies(dt)
 
     local px,py = player:getPosition()
-    cam:lookAt(px, py)
+    cam:lookAt(px, love.graphics.getHeight()/2)
 end
 
 function love.draw()
     cam:attach()
         gameMap:drawLayer(gameMap.layers["Tile Layer 1"])
-        world:draw()
+        --world:draw()
         drawPlayer()
     cam:detach()
 end
