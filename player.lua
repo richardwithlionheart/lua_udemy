@@ -1,5 +1,8 @@
 local M = {}
 
+playerStartX = 360
+playerStartY = 100
+
 player = world:newRectangleCollider(360, 100, 40, 100, {collision_class = "Player"})
 player:setFixedRotation(true)
 player.speed = 240
@@ -30,13 +33,12 @@ function playerUpdate(dt)
             player.direction = -1
             player.grounded = true
         end
-    end
-
-
-
+        
         if player:enter('Danger') then
             player:destroy()
         end
+    end
+
 
         if player.grounded then
             if player.isMoving == true then
