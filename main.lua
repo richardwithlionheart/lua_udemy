@@ -1,4 +1,5 @@
 function love.load()
+    print( "Here0" )
     love.window.setMode(1000, 768)
 
     anim8 = require 'libraries/anim8/anim8'
@@ -54,9 +55,12 @@ function love.update(dt)
     cam:lookAt(px, love.graphics.getHeight()/2)
 
     local colliders = world:queryCircleArea(flagX, flagY, 10, {'Player'})
+    print("Here1")
     if #colliders > 0 then
+        print("Here2")
         if currentLevel == level1 then
-        loadMap("level2")
+            print("Here2")
+            loadMap("level2")
         elseif currentLevel == "level2" then
             loadMap("level1")
         end
@@ -123,6 +127,7 @@ end
 function loadMap(mapName)
     currentLevel = mapName
     destroyAll()
+    player:setPosition(300, 100)
     gameMap = sti("maps/" .. mapName .. ".lua")
     for i, obj in pairs(gameMap.layers["Platforms"].objects) do
         spawnPlatform(obj.x, obj.y, obj.width, obj.height)
