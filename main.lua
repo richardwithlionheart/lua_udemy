@@ -58,7 +58,7 @@ function love.update(dt)
     print("Here1")
     if #colliders > 0 then
         print("Here2")
-        if currentLevel == level1 then
+        if currentLevel == "level1" then
             print("Here2")
             loadMap("level2")
         elseif currentLevel == "level2" then
