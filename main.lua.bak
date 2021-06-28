@@ -33,7 +33,7 @@ function love.load()
     world:setQueryDebugDrawing(true)
 
     world:addCollisionClass('Platform')
-    world:addCollisionClass('Player' --[[, {ignores = {'Platform'}}]])
+    world:addCollisionClass('Player' --[[{ignores = {'Platform'}}]])
     world:addCollisionClass('Danger')
 
     require('player')
